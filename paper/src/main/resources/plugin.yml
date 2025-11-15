@@ -1,0 +1,6 @@
+name: OfflineEncryptor
+version: $version
+main: io.github.lumine1909.offlineencryptor.paper.OfflineEncryptor
+api-version: 1.21
+authors:
+  - Lumine1909

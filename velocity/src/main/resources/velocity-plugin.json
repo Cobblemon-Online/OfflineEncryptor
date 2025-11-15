@@ -1,0 +1,7 @@
+{
+  "id": "offlineencryptor",
+  "name": "OfflineEncryptor",
+  "version": "$version",
+  "main": "io.github.lumine1909.offlineencryptor.velocity.OfflineEncryptor",
+  "authors": ["Lumine1909"]
+}
