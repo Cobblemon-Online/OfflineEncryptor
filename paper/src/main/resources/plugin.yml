@@ -3,5 +3,7 @@ version: $version
 main: io.github.lumine1909.offlineencryptor.paper.OfflineEncryptor
 api-version: 1.21
 folia-supported: true
+softdepend:
+  - ViaVersion
 authors:
   - Lumine1909

@@ -1,6 +1,7 @@
 package io.github.lumine1909.offlineencryptor.paper;
 
 import io.github.lumine1909.offlineencryptor.NetworkProcessor;
+import io.github.lumine1909.offlineencryptor.ViaVersionUtil;
 import io.github.lumine1909.offlineencryptor.paper.metrics.Metrics;
 import io.papermc.paper.network.ChannelInitializeListenerHolder;
 import net.kyori.adventure.key.Key;

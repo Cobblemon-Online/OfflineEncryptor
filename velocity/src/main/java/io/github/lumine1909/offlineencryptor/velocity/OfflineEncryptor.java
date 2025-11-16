@@ -36,7 +36,6 @@ public class OfflineEncryptor {
             throw new IllegalStateException("Encryption is already enabled in online mode!");
         }
         plugin = this;
-        ServerChannelInitializerInjector.injectToServer(this.server);
     }
 
     public VelocityServer getServer() {
@@ -50,6 +49,7 @@ public class OfflineEncryptor {
     @Subscribe
     public void onProxyInitialization(ProxyInitializeEvent event) {
         metricsFactory.make(this, 27988);
+        ServerChannelInitializerInjector.injectToServer(this.server);
     }
 
     @Subscribe
