@@ -21,8 +21,6 @@ In short:
 * Does **not** require Mojang session servers
 * Zero changes required for clients — works with any vanilla client
 
----
-
 ## ✅ Advantages
 
 ### ✔️ **Protects sensitive packets**
@@ -49,8 +47,6 @@ Encryption uses the exact vanilla protocol, so players don’t need mods, plugin
 ### ✔️ **Drop-in for existing offline servers**
 
 Just enable it — nothing need to change, no data will be modified (UUID, username, etc.)
-
----
 
 ## ⚠️ Limitations / Cons
 
@@ -105,7 +101,6 @@ AES/CFB8 encryption is not heavy, but on very large servers the extra per-packet
 * Man-in-the-middle manipulation before encryption begins
 * Any kind of real authentication
 
----
 
 ## 📝 Summary
 
@@ -119,10 +114,7 @@ This plugin is for:
 * Hosts needing protection against local sniffers
 * Privacy-conscious LAN/VPN servers
 
----
-
 ## Compatibility & Installation
-
 
 ###  Supported Versions
 
@@ -144,13 +136,9 @@ This plugin is for:
 * BungeeCord / Waterfall
 * Any server < 1.20.5
 
----
-
 ### Client Requirements
 
 * **Requires Minecraft client 1.20.5 or newer**: Mojang changed the handshake and encryption flow in 1.20.5; older clients cannot complete the encryption sequence. This plugin **will not** send encrypted request packet to players with older versions.
-
----
 
 ### ViaVersion Compatibility
 
