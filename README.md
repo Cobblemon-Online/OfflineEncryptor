@@ -118,7 +118,7 @@ This plugin is for:
 
 ###  Supported Versions
 
-#### **Paper / Purpur / Leaves / Leaf / other Paper-downstreams**
+#### **Paper / Purpur / Leaves / Leaf / other Paper-downstream**
 
 * Version: 1.20.5+
 * Install **if not using proxy like Velocity**.
@@ -138,7 +138,7 @@ This plugin is for:
 
 ### Client Requirements
 
-* **Requires Minecraft client 1.20.5 or newer**: Mojang changed the handshake and encryption flow in 1.20.5; older clients cannot complete the encryption sequence. This plugin **will not** send encrypted request packet to players with older versions.
+* **Minecraft client 1.20.5 or newer**: Mojang changed the handshake and encryption flow in 1.20.5; older clients cannot complete the encryption sequence. This plugin **will not** send encrypted request packet to players with older versions.
 
 ### ViaVersion Compatibility
 
@@ -152,5 +152,5 @@ ViaVersion can down-translate gameplay packets, but **encryption still requires 
 
 ---
 
-### Netty pipeline after installed this plugin with [ViaVersion](https://github.com/ViaVersion/ViaVersion).
+**Netty pipeline after installed this plugin with [ViaVersion](https://github.com/ViaVersion/ViaVersion).**
 ![img.png](img.png)
