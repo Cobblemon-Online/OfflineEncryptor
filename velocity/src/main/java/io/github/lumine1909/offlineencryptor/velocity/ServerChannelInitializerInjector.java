@@ -12,7 +12,7 @@ import static io.github.lumine1909.offlineencryptor.velocity.OfflineEncryptor.pl
 public class ServerChannelInitializerInjector {
 
     private static final Field<ConnectionManager> field$cm = Field.of(
-        VelocityServer.class, "cm", ConnectionManager.class
+        VelocityServer.class, "cm"
     );
 
     private static final Method<Void> method$initChannel = Method.of(

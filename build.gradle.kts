@@ -52,7 +52,7 @@ subprojects {
         maven("https://repo.viaversion.com")
     }
     dependencies {
-        implementation("io.github.lumine1909:reflexion:1.0.3")
+        implementation("io.github.lumine1909:reflexion:1.0.4")
         compileOnly("io.netty:netty-all:4.1.118.Final")
         compileOnly("com.viaversion:viaversion-api:5.5.1")
     }
