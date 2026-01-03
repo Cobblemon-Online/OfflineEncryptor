@@ -30,7 +30,7 @@ public class ServerChannelInitializerInjector {
         return new ChannelInitializer<>() {
             @Override
             protected void initChannel(Channel channel) {
-                method$initChannel.invoke(delegate, channel);
+                method$initChannel.invokeFast(delegate, channel);
                 plugin.getNetworkProcessor().inject(channel);
             }
         };
