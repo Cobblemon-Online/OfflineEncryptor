@@ -3,6 +3,7 @@ package io.github.lumine1909.offlineencryptor;
 import com.viaversion.viaversion.api.connection.ProtocolInfo;
 import com.viaversion.viaversion.api.connection.UserConnection;
 import io.github.lumine1909.reflexion.Field;
+import io.github.lumine1909.reflexion.exception.NotFoundException;
 import io.netty.channel.Channel;
 
 import java.util.Optional;
@@ -35,7 +36,17 @@ public interface ViaVersionUtil {
 
     class Velocity implements ViaVersionUtil {
 
-        private final Field<UserConnection> field$UserConnection = Field.of("com.viaversion.viaversion.velocity.handlers.VelocityEncodeHandler", "info", UserConnection.class);
+        private static final Field<UserConnection> field$UserConnection;
+
+        static {
+            Field<UserConnection> field;
+            try {
+                field = Field.of("com.viaversion.viaversion.platform.ViaEncodeHandler", "connection", UserConnection.class);
+            } catch (NotFoundException e) {
+                field = Field.of("com.viaversion.viaversion.velocity.handlers.VelocityEncodeHandler", "info", UserConnection.class);
+            }
+            field$UserConnection = field;
+        }
 
         public Optional<UserConnection> getConnection(Channel channel) {
             Object viaEncoder = channel.pipeline().get("via-encoder");
@@ -49,7 +60,17 @@ public interface ViaVersionUtil {
 
     class Paper implements ViaVersionUtil {
 
-        private final Field<UserConnection> field$UserConnection = Field.of("com.viaversion.viaversion.bukkit.handlers.BukkitEncodeHandler", "connection", UserConnection.class);
+        private static final Field<UserConnection> field$UserConnection;
+
+        static {
+            Field<UserConnection> field;
+            try {
+                field = Field.of("com.viaversion.viaversion.platform.ViaEncodeHandler", "connection", UserConnection.class);
+            } catch (NotFoundException e) {
+                field = Field.of("com.viaversion.viaversion.bukkit.handlers.BukkitEncodeHandler", "connection", UserConnection.class);
+            }
+            field$UserConnection = field;
+        }
 
         public Optional<UserConnection> getConnection(Channel channel) {
             Object viaEncoder = channel.pipeline().get("via-encoder");

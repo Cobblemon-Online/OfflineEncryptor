@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "io.github.lumine1909"
-version = "2.0.4"
+version = "2.0.5"
 
 repositories {
     mavenCentral()
@@ -49,12 +49,10 @@ subprojects {
         mavenCentral()
         maven("https://repo.papermc.io/repository/maven-public/")
         maven("https://repo.velocitypowered.com/snapshots/")
-        maven("https://repo.viaversion.com")
     }
     dependencies {
         implementation("io.github.lumine1909:reflexion:3.1.0")
         compileOnly("io.netty:netty-all:4.1.118.Final")
-        compileOnly("com.viaversion:viaversion-api:5.5.1")
     }
     java {
         toolchain.languageVersion.set(JavaLanguageVersion.of(21))
