@@ -62,6 +62,12 @@ public class VelocityPacketInterceptor extends PacketInterceptor<HandshakePacket
 
     @Override
     protected void processC2SHandshake(ChannelHandlerContext ctx, HandshakePacket packet) {
+        if(packet.getServerAddress() != null && packet.getServerAddress().contains("///PREMIUM")) {
+            this.enabled = false;
+            channel.eventLoop().execute(() -> processor.uninject(channel));
+            return;
+        }
+
         if (!viaUtil.hasVia()) {
             validateVersion(packet.getProtocolVersion().getProtocol());
         }
